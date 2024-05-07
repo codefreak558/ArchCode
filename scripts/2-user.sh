@@ -67,7 +67,11 @@ if [[ $INSTALL_TYPE == "FULL" ]]; then
     konsave -i ~/ArchTitus/configs/kde.knsv
     sleep 1
     konsave -a kde
- fi
+  elif [[ $DESKTOP_ENV == "openbox" ]]; then
+    cd ~
+    git clone https://github.com/stojshic/dotfiles-openbox
+    ./dotfiles-openbox/install-titus.sh
+  fi
 fi
 
 echo -ne "
